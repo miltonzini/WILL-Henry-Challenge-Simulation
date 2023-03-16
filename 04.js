@@ -13,20 +13,14 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-  var array = num.split("");
-  var arrayReverso = [];
-  
-  for (i = array.length - 1; i >= 0; i--) {
-    arrayReverso.push(array[i]);
-  }
-  var numReverso = arrayReverso.join('');
-  
-  if (numReverso === num) {
-    return true;
-  } else {
-    return false;
-  }
-
+  var numCopy = num.toString();
+  var reverso = numCopy.split("").reverse().join(''); // sin parsear
+ 
+  if (numCopy == reverso) {     
+      return true;
+  } else {     
+      return false;
+  }    
 }
 
 // No modifiques nada debajo de esta linea //
