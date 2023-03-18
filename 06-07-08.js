@@ -11,6 +11,10 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre = nombre;
+      this.edad = edad;
+      this.hobbies = hobbies;
+      this.amigos = amigos;
 
     }
 
@@ -20,7 +24,12 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-
+      var nuevoAmigo = {
+        nombre: nombre,
+        edad: edad,
+      }
+      this.amigos.push(nuevoAmigo);
+    
     }
 
     addHobby(hobby) {
