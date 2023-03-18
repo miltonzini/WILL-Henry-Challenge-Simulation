@@ -37,6 +37,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.hobbies.push(hobby);
 
     }
     getFriends() {
@@ -47,6 +48,9 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
+      var newArray = this.amigos.map ((friend) => {return friend.nombre});
+      return newArray;
+      
 
     }
 
@@ -56,6 +60,7 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
+      return this.hobbies;
 
     }
 
@@ -75,6 +80,13 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
+      var cantidadAmigos = this.amigos.length;
+      var sumaEdades = 0;
+      for (var i = 0; i < this.amigos.length; i++) {
+          sumaEdades += this.amigos[i].edad;
+      }
+      var promedioEdades = sumaEdades / cantidadAmigos;
+      return(promedioEdades);
 
     }
   };
